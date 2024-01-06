@@ -27,7 +27,7 @@ const Events = [
         Simg: sImg3,
         title: 'Fiesta',
         li1: 'Sábado, 16 Marzo. Después de la Ceremonia',
-        li2: 'Salón Vampi - Ruta 3, Barrio Jardines',
+        li2: 'Salón EL VAMPI - Ruta 3, Barrio Jardines',
         animation:'1600',
     },
 
@@ -37,7 +37,7 @@ const EventSection = (props) => {
     return (
         <section className="wpo-event-section section-padding" id="event">
             <div className="container">
-                <SectionTitle subTitle={'¡Nos casamos!'} MainTitle={'Cuándo y Dónde?'} />
+                <SectionTitle subTitle={'¡Nos casamos!'} MainTitle={'¿Cuándo y Dónde?'} />
                 <div className="wpo-event-wrap">
                     <div className="row">
                         {Events.map((event, eitem) => (

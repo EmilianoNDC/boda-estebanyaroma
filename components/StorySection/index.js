@@ -40,8 +40,8 @@ const Storys = [
         sImg: sImg3,
         flower: flowerShape,
         title: 'Nuestro compromiso',
-        date: '16 Jan 2023',
-        description: 'Consectetur adipiscing elit. Fringilla at risus orci, tempus facilisi sed. Enim tortor, faucibus netus orci donec volutpat adipiscing. Sit condimentum elit convallis libero. Nunc in eu tellus ipsum placerat.',
+        date: '24 Diciembre del 2022',
+        description: 'Era noche de Navidad. Sin previo aviso, Esteban propuso a nuestra hija ir en busca de un regalo para mi. Sorprendentemente, regresaron con un hermoso anillo de compromiso, transformando la celebración en una noche que sellaría nuestro compromiso de por vida.',
     }
 
 ]
@@ -51,7 +51,7 @@ const StorySection = (props) => {
     return (
         <section className="wpo-story-section-s2 section-padding" id="story">
             <div className="container">
-                <SectionTitle subTitle={'Nuestra historia'} MainTitle={'Cómo todo empezó?'} />
+                <SectionTitle subTitle={'Nuestra historia'} MainTitle={'¿Cómo todo empezó?'} />
                 <div className="wpo-story-wrap">
                     {
                         Storys.map((story, st) => (

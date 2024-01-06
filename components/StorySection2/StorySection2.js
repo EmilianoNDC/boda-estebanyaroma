@@ -24,24 +24,24 @@ const Storys = [
         sImg: sImg1,
         shape: shape1,
         title: 'Cómo nos conocimos',
-        date: '15 June 2014',
-        description: 'Consectetur adipiscing elit. Fringilla at risus orci, tempus facilisi sed. Enim tortor, faucibus netus orci donec volutpat adipiscing. Sit condimentum elit convallis libero. Nunc in eu tellus ipsum placerat.',
+        date: '19 de Setiembre del 2020',
+        description: 'Todo comenzó con un simple mensaje en Facebook. Después de unos intercambios animados, decidimos conocernos en persona. La conexión fue instantánea y, sorprendentemente, me invitó a cenar. En esa cena, descubrimos una afinidad única y desde entonces, nuestra historia juntos ha sido una continua aventura llena de amor y complicidad.',
     },
     {
         sImg: sImg2,
         shape: shape2,
-        title: 'Él me propuso, dije que sí',
-        date: '12 Dec 2019',
-        description: 'Consectetur adipiscing elit. Fringilla at risus orci, tempus facilisi sed. Enim tortor, faucibus netus orci donec volutpat adipiscing. Sit condimentum elit convallis libero. Nunc in eu tellus ipsum placerat.',
+        title: 'Nuestro compromiso',
+        date: '24 de Diciembre del 2022',
+        description: 'Era noche de Navidad. Sin previo aviso, Esteban propuso a nuestra hija ir en busca de un regalo para mi. Sorprendentemente, regresaron con un hermoso anillo de compromiso, transformando la celebración en una noche que sellaría nuestro compromiso de por vida.',
         order1: 'order-lg-2 order-1',
         order2: 'order-lg-1 order-2',
     },
     {
         sImg: sImg3,
         shape: shape3,
-        title: 'Nuestro compromiso',
-        date: '16 Jan 2023',
-        description: 'Consectetur adipiscing elit. Fringilla at risus orci, tempus facilisi sed. Enim tortor, faucibus netus orci donec volutpat adipiscing. Sit condimentum elit convallis libero. Nunc in eu tellus ipsum placerat.',
+        title: 'Él me propuso, dije que sí',
+        date: '24 de Diciembre del 2022',
+        description: 'Esteban no solo me reveló un hermoso anillo, sino también la emocionante noticia de nuestra próxima boda, respondiéndole definitivamente que sí.',
     }
 
 ]
@@ -51,7 +51,7 @@ const StorySection2 = (props) => {
     return (
         <section className="wpo-story-section section-padding" id="story">
             <div className="container">
-                <SectionTitle subTitle={'Nuestra historia'} MainTitle={'Cómo todo empezó?'} />
+                <SectionTitle subTitle={'Nuestra historia'} MainTitle={'¿Cómo todo empezó?'} />
                 <div className="wpo-story-wrap">
                     {
                         Storys.map((story, st) => (

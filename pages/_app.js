@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Head>
-        <title>Habibi - Wedding & Wedding Planner Next Js Template</title>
+        <title>Esteban & Aroma - Invitación</title>
       </Head>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>

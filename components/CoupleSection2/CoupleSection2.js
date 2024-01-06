@@ -26,13 +26,6 @@ const CoupleSection2 = (props) => {
                                 <div className="couple-text">
                                     <h3>Aroma</h3>
                                     <p>En el viaje del matrimonio, cada día a tu lado es una nueva página en el libro de nuestro amor. Que este capítulo que estamos a punto de comenzar esté lleno de alegría, complicidad y amor eterno.</p>
-                                    <div className="social">
-                                        <ul>
-                                            <li><Link href="/home-2"><i className="ti-facebook"></i></Link></li>
-                                            <li><Link href="/home-2"><i className="ti-twitter-alt"></i></Link></li>
-                                            <li><Link href="/home-2"><i className="ti-instagram"></i></Link></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -48,14 +41,8 @@ const CoupleSection2 = (props) => {
                                 </div>
                                 <div className="couple-text">
                                     <h3>Esteban</h3>
-                                    <p>Cada día contigo es una página llena de amor y complicidad. Que este nuevo capítulo que estamos a punto de comenzar esté lleno de risas, sueños compartidos y amor eterno.</p>
-                                    <div className="social">
-                                        <ul>
-                                            <li><Link href="/home-2"><i className="ti-facebook"></i></Link></li>
-                                            <li><Link href="/home-2"><i className="ti-twitter-alt"></i></Link></li>
-                                            <li><Link href="/home-2"><i className="ti-instagram"></i></Link></li>
-                                        </ul>
-                                    </div>
+                                    <p>Cada día contigo es una página llena de amor y complicidad. Que este nuevo capítulo que estamos a punto de comenzar esté lleno de risas y sueños compartidos.</p>
+
                                 </div>
                             </div>
                         </div>
