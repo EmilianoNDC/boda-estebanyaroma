@@ -13,7 +13,7 @@ const Events = [
         Simg: sImg1,
         title: 'Civil',
         li1: 'Viernes, 15 Marzo. 2024 11:30 AM',
-        li2: 'Juzgado - Martín Dermit',
+        li2: 'Municipio - Av. Artigas 750',
         animation:'1200',
     },
     {
