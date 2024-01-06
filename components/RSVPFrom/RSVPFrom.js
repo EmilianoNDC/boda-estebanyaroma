@@ -43,7 +43,7 @@ const RSVPFrom = () => {
 
       console.log('WhatsApp Message:', whatsappMessage);
 
-      window.open(`https://wa.me/+598028021?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+      window.open(`https://wa.me/+59891028021?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
     } else {
       validator.showMessages();
     }
