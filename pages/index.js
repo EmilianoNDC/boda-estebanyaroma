@@ -86,10 +86,10 @@ const HomePage = () => {
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', width: '80%' }}>
-              <button onClick={startAudio} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20px', width: '48%' }}>
+              <button onClick={startAudio} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20px', width: '48%', fontSize: '14px', padding: '10px' }}>
                 INGRESAR CON MÚSICA
               </button>
-              <button onClick={closeModal} className="theme-btn" style={{ borderRadius: '20px', width: '48%' }}>
+              <button onClick={closeModal} className="theme-btn" style={{ borderRadius: '20px', width: '48%', fontSize: '14px', padding: '10px' }}>
                 INGRESAR SIN MÚSICA
               </button>
             </div>
