@@ -27,6 +27,11 @@ const HomePage = () => {
   
     const startAudio = () => {
       const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
+      audioElement.addEventListener('ended', () => {
+        // Repetir la música una vez que termine
+        audioElement.currentTime = 0;
+        audioElement.play();
+      });
       audioElement.play();
       closeModal();
     };
