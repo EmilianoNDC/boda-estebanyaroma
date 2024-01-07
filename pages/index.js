@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Hero2 from '../components/hero2/hero2';
 import CoupleSection2 from '../components/CoupleSection2/CoupleSection2';
@@ -9,21 +9,26 @@ import EventSection from '../components/EventSection/EventSection';
 import BlogSection from '../components/BlogSection/BlogSection';
 import Footer from '../components/footer/Footer';
 import Scrollbar from '../components/scrollbar/scrollbar';
+import Modal from 'react-modal';
 
 const HomePage = () => {
+  const [isModalOpen, setModalOpen] = useState(true);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   useEffect(() => {
-    // Obtén el elemento de audio
     const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
+    if (!isModalOpen) {
+      // Reproduce la canción solo cuando el modal está cerrado
+      audioElement.play();
+    }
 
-    // Reproduce la canción cuando la página se carga
-    audioElement.play();
-
-    // Opcional: Puedes detener la reproducción al desmontar el componente
     return () => {
       audioElement.pause();
       audioElement.currentTime = 0;
     };
-  }, []); // El segundo argumento del useEffect es un array de dependencias, en este caso, está vacío para que se ejecute solo una vez al montar la página.
+  }, [isModalOpen]);
 
   return (
     <Fragment>
@@ -37,6 +42,16 @@ const HomePage = () => {
       <BlogSection />
       <Footer />
       <Scrollbar />
+
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Reproducir música"
+      >
+        <h2>¿Quieres reproducir música?</h2>
+        <button onClick={closeModal}>Cerrar</button>
+        <button onClick={() => { close(); closeModal(); }}>Reproducir música</button>
+      </Modal>
     </Fragment>
   );
 };
