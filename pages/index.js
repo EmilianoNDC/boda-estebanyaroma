@@ -12,53 +12,73 @@ import Scrollbar from '../components/scrollbar/scrollbar';
 import Modal from 'react-modal';
 
 const HomePage = () => {
-  const [isModalOpen, setModalOpen] = useState(true);
-  const [shouldPlayAudio, setShouldPlayAudio] = useState(false);
-
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => {
-    setModalOpen(false);
-    setShouldPlayAudio(true); // Marcar que la música debería reproducirse al cerrar el modal
+    const [isModalOpen, setModalOpen] = useState(true);
+    const [shouldPlayAudio, setShouldPlayAudio] = useState(false);
+  
+    const openModal = () => setModalOpen(true);
+    const closeModal = () => setModalOpen(false);
+  
+    const startAudio = () => {
+      const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
+      audioElement.play();
+      setModalOpen(false);
+    };
+  
+    useEffect(() => {
+      if (shouldPlayAudio) {
+        startAudio();
+      }
+      setShouldPlayAudio(false);
+    }, [shouldPlayAudio]);
+  
+    return (
+      <>
+        <Navbar />
+        <Hero2 />
+        <CoupleSection2 />
+        <StorySection2 />
+        <PortfolioSection />
+        <RsvpSection />
+        <EventSection />
+        <BlogSection />
+        <Footer />
+        <Scrollbar />
+  
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          contentLabel="Reproducir música"
+          style={{
+            overlay: {
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+              zIndex: 1000, // ajusta el valor según sea necesario
+            },
+            content: {
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              maxWidth: '400px', // ajusta el valor según sea necesario
+              width: '100%',
+              textAlign: 'center',
+              padding: '20px',
+              borderRadius: '8px',
+              background: 'white',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            },
+          }}
+        >
+          <h2>¿Quieres reproducir música?</h2>
+          <button onClick={startAudio}>Reproducir música</button>
+          <button onClick={closeModal}>No quiero reproducir música</button>
+        </Modal>
+      </>
+    );
   };
-
-  const startAudio = () => {
-    const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
-    audioElement.play();
-    setModalOpen(false); // Cerrar el modal al iniciar la reproducción
-  };
-
-  useEffect(() => {
-    if (shouldPlayAudio) {
-      startAudio();
-    }
-    // Restablecer el estado después de reproducir la música
-    setShouldPlayAudio(false);
-  }, [shouldPlayAudio]);
-
-  return (
-    <>
-      <Navbar />
-      <Hero2 />
-      <CoupleSection2 />
-      <StorySection2 />
-      <PortfolioSection />
-      <RsvpSection />
-      <EventSection />
-      <BlogSection />
-      <Footer />
-      <Scrollbar />
-
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Reproducir música"
-      >
-        <h2>¿Quieres reproducir música?</h2>
-        <button onClick={startAudio}>Reproducir música</button>
-        <button onClick={closeModal}>No quiero reproducir música</button>
-      </Modal>
-    </>
-  );
-};
-
-export default HomePage;
+  
+  export default HomePage;
