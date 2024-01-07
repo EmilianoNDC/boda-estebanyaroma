@@ -89,7 +89,7 @@ const HomePage = () => {
               <button onClick={startAudio} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20px', width: '48%', fontSize: '14px', padding: '10px' }}>
                 INGRESAR CON MÚSICA
               </button>
-              <button onClick={closeModal} className="theme-btn" style={{ borderRadius: '20px', width: '48%', fontSize: '14px', padding: '10px' }}>
+              <button onClick={closeModal} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20px', width: '48%', fontSize: '14px', padding: '10px' }}>
                 INGRESAR SIN MÚSICA
               </button>
             </div>
