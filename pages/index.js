@@ -81,12 +81,14 @@ const HomePage = () => {
           <p style={{ margin: '10px 0', fontSize: '16px' }}>
             La música de fondo es parte de la experiencia.
           </p>
-          <button onClick={startAudio} className="theme-btn">
-            INGRESAR CON MÚSICA
-          </button>
-          <button onClick={closeModal} className="theme-btn">
-            INGRESAR SIN MÚSICA
-          </button>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
+            <button onClick={startAudio} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20%' }}>
+              INGRESAR CON MÚSICA
+            </button>
+            <button onClick={closeModal} className="theme-btn" style={{ borderRadius: '20%' }}>
+              INGRESAR SIN MÚSICA
+            </button>
+          </div>
         </Modal>
       </>
     );
