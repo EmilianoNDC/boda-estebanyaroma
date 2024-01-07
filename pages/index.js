@@ -13,9 +13,13 @@ import Modal from 'react-modal';
 
 const HomePage = () => {
   const [isModalOpen, setModalOpen] = useState(true);
+  const [shouldPlayAudio, setShouldPlayAudio] = useState(false);
 
   const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const closeModal = () => {
+    setModalOpen(false);
+    setShouldPlayAudio(true); // Marcar que la música debería reproducirse al cerrar el modal
+  };
 
   const startAudio = () => {
     const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
@@ -23,17 +27,12 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
-    if (!isModalOpen) {
-      // Reproduce la canción solo cuando el modal está cerrado
-      audioElement.play();
+    if (shouldPlayAudio) {
+      startAudio();
     }
-
-    return () => {
-      audioElement.pause();
-      audioElement.currentTime = 0;
-    };
-  }, [isModalOpen]);
+    // Restablecer el estado después de reproducir la música
+    setShouldPlayAudio(false);
+  }, [shouldPlayAudio]);
 
   return (
     <Fragment>
@@ -55,11 +54,10 @@ const HomePage = () => {
       >
         <h2>¿Quieres reproducir música?</h2>
         <button onClick={closeModal}>Cerrar</button>
-        <button onClick={() => { startAudio(); closeModal(); }}>Reproducir música</button>
+        <button onClick={() => { closeModal(); }}>Reproducir música</button>
       </Modal>
     </Fragment>
   );
 };
 
 export default HomePage;
-
