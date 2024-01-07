@@ -55,7 +55,7 @@ const HomePage = () => {
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+              backgroundColor: 'rgba(0, 0, 0, 0.5)', // Ajusta el valor de opacidad aquí
               zIndex: 1000, // ajusta el valor según sea necesario
               overflow: 'hidden', // desactiva el desplazamiento en el cuerpo principal
             },
@@ -73,10 +73,14 @@ const HomePage = () => {
               borderRadius: '8px',
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
               padding: '20px',
+              color: '#333', // Ajusta el color según el tema de la web
             },
           }}
         >
-          <h2>¿Quieres reproducir música?</h2>
+          <h2>Bienvenidos a la invitación de Esteban y Aroma</h2>
+          <p style={{ margin: '10px 0', fontSize: '16px' }}>
+            La música de fondo es parte de la experiencia.
+          </p>
           <button onClick={startAudio} className="theme-btn">
             INGRESAR CON MÚSICA
           </button>
