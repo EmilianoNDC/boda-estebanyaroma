@@ -28,9 +28,10 @@ const HomePage4 = () => {
             <PortfolioSectionS2 />
             <BrideGrooms2 />
             <RsvpSectionS3 bg={'/images/rsvp/bg.jpg'}/>
+            <Footer footerClass={'wpo-site-footer-s2'}/>
             <EventSectionS3/>
             <BlogSection bgClass={'section-bg'}/>
-            <Footer footerClass={'wpo-site-footer-s2'}/>
+
             <Scrollbar />
         </Fragment>
     )

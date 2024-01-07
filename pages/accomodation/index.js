@@ -16,9 +16,10 @@ const AccomodationPage =() => {
             <Navbar hclass={'wpo-header-style-3'}/>
             <PageTitle pageTitle={'Accomodation'} pagesub={'Accomodation'}/> 
             <WeddingDate2 pbClass={'pb-0'}/>
+            <EventSection/>
             <CoupleSection3 cClass={'pt-160'}/>
             <VideoSection vimg={vImg}/>
-            <EventSection/>
+
             <PartnerSection pClass={'section-padding pt-0'} />
             <Footer footerClass={'wpo-site-footer-s2'}/>
             <Scrollbar/>
