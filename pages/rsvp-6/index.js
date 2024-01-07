@@ -14,8 +14,9 @@ const RsvpPage6 = () => {
             <Navbar hclass={'wpo-header-style-3'}/>
             <PageTitle pageTitle={'R.S.V.P'} pagesub={'RSVP'} />
             <WeddingDate2 pbClass={'pb-120'}/>
-            <RsvpSectionS7 bg={'/images/rsvp/bg.jpg'} rClass={'pt-120'}/>
             <EventSection/>
+            <RsvpSectionS7 bg={'/images/rsvp/bg.jpg'} rClass={'pt-120'}/>
+
             <PartnerSection pClass={'pb-120 pt-0'}/>
             <Footer footerClass={'wpo-site-footer-s2'}/>
             <Scrollbar />
