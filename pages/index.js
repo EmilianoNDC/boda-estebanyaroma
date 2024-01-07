@@ -45,10 +45,6 @@ const HomePage = () => {
   
     return (
       <>
-            <Helmet>
-        <meta property="og:image" content="/images/social-perfilpic.jpg" />
-        {/* Otras etiquetas Open Graph que puedas necesitar */}
-      </Helmet>
         <Navbar />
         <Hero2 />
         <CoupleSection2 />
