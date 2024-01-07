@@ -25,9 +25,10 @@ const HomePage2 = () => {
             <PortfolioSection />
             <BrideGrooms brClass={'pt-0'} />
             <RsvpSection rClass={'wpo-contact-section-s2'} />
+            <Footer footerClass={'wpo-site-footer-s2'} />
             <EventSection />
             <BlogSection />
-            <Footer footerClass={'wpo-site-footer-s2'} />
+
             <Scrollbar />
         </Fragment>
     )

@@ -33,8 +33,9 @@ const HomePage = () => {
       <StorySection2 />
       <PortfolioSection />
       <RsvpSection />
-      <EventSection />
       <Footer />
+      <EventSection />
+      
       <BlogSection />
       
       <Scrollbar />
