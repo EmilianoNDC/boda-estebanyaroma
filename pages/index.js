@@ -17,14 +17,12 @@ const HomePage = () => {
   
     const openModal = () => {
       setModalOpen(true);
-      document.documentElement.style.overflow = 'hidden';  // Desactiva el scrolling en HTML
-      document.body.scroll = 'no';  // Desactiva el scrolling en el body (para navegadores antiguos)
+      document.body.style.overflow = 'hidden';  // Desactiva el scrolling
     };
   
     const closeModal = () => {
       setModalOpen(false);
-      document.documentElement.style.overflow = 'auto';  // Activa el scrolling en HTML
-      document.body.scroll = 'yes';  // Activa el scrolling en el body (para navegadores antiguos)
+      document.body.style.overflow = 'auto';  // Activa el scrolling
     };
   
     const startAudio = () => {
@@ -67,7 +65,6 @@ const HomePage = () => {
               bottom: 0,
               backgroundColor: 'rgba(0, 0, 0, 0.5)',
               zIndex: 1000,
-              overflow: 'hidden',
             },
             content: {
               position: 'absolute',
@@ -79,13 +76,12 @@ const HomePage = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              width: '100%', // Ocupa todo el ancho de la pantalla
-              height: '100%', // Ocupa toda la altura de la pantalla
+              width: '100%',
+              height: '100%',
               background: 'white',
-              borderRadius: '0', // Ajusta el radio de los bordes
+              borderRadius: '0',
               padding: '20px',
               color: '#333',
-              WebkitBorderRadius: '0', // Anula los bordes redondeados en algunos navegadores móviles
             },
           }}
         >
