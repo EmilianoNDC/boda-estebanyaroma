@@ -69,8 +69,8 @@ const HomePage = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              width: '90%',
-              maxWidth: '400px',
+              width: '90%', // Ajusta el ancho según sea necesario
+              maxWidth: '400px', // Valor máximo para el ancho
               margin: 'auto', // Centra horizontalmente
               background: 'white',
               borderRadius: '8px',
