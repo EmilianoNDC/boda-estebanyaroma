@@ -50,7 +50,7 @@ const HomePage = () => {
       >
         <h2>¿Quieres reproducir música?</h2>
         <button onClick={closeModal}>Cerrar</button>
-        <button onClick={() => { close(); closeModal(); }}>Reproducir música</button>
+        <button onClick={() => { startAudio(); closeModal(); }}>Reproducir música</button>
       </Modal>
     </Fragment>
   );
