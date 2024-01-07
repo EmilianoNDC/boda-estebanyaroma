@@ -70,9 +70,8 @@ const HomePage = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              width: '90%', // Puedes ajustar este valor según tus necesidades
-              maxWidth: '400px', // Valor máximo para el ancho
-              margin: 'auto', // Centra horizontalmente
+              width: '100%', // Ocupa todo el ancho de la pantalla
+              height: '100%', // Ocupa toda la altura de la pantalla
               background: 'white',
               borderRadius: '20px', // Ajusta el radio de los bordes
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
