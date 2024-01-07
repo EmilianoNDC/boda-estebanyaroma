@@ -9,20 +9,31 @@ import EventSection from '../components/EventSection/EventSection';
 import BlogSection from '../components/BlogSection/BlogSection';
 import Footer from '../components/footer/Footer';
 import Scrollbar from '../components/scrollbar/scrollbar';
+import Modal from 'react-modal';
 
 const HomePage = () => {
-  useEffect(() => {
-    const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
-    
-    // Reproducir la música automáticamente al cargar la página
-    audioElement.play();
+  const [isModalOpen, setModalOpen] = useState(true);
+  const [shouldPlayAudio, setShouldPlayAudio] = useState(false);
 
-    // Opcional: Detener la reproducción al desmontar el componente
-    return () => {
-      audioElement.pause();
-      audioElement.currentTime = 0;
-    };
-  }, []); // El segundo argumento del useEffect es un array de dependencias, está vacío para que se ejecute solo una vez al montar la página.
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => {
+    setModalOpen(false);
+    setShouldPlayAudio(true); // Marcar que la música debería reproducirse al cerrar el modal
+  };
+
+  const startAudio = () => {
+    const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
+    audioElement.play();
+    setModalOpen(false); // Cerrar el modal al iniciar la reproducción
+  };
+
+  useEffect(() => {
+    if (shouldPlayAudio) {
+      startAudio();
+    }
+    // Restablecer el estado después de reproducir la música
+    setShouldPlayAudio(false);
+  }, [shouldPlayAudio]);
 
   return (
     <>
@@ -36,6 +47,16 @@ const HomePage = () => {
       <BlogSection />
       <Footer />
       <Scrollbar />
+
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Reproducir música"
+      >
+        <h2>¿Quieres reproducir música?</h2>
+        <button onClick={startAudio}>Reproducir música</button>
+        <button onClick={closeModal}>No quiero reproducir música</button>
+      </Modal>
     </>
   );
 };
