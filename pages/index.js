@@ -55,36 +55,40 @@ const HomePage = () => {
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.5)', // Ajusta el valor de opacidad aquí
-              zIndex: 1000, // ajusta el valor según sea necesario
-              overflow: 'hidden', // desactiva el desplazamiento en el cuerpo principal
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+              zIndex: 1000,
+              overflow: 'hidden',
             },
             content: {
               position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
+              width: '90%',
+              maxWidth: '400px',
+              margin: 'auto', // Centra horizontalmente
               background: 'white',
               borderRadius: '8px',
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
               padding: '20px',
-              color: '#333', // Ajusta el color según el tema de la web
+              color: '#333',
             },
           }}
         >
           <h2>Bienvenidos a la invitación de Esteban y Aroma</h2>
-          <p style={{ margin: '10px 0', fontSize: '16px' }}>
+          <p style={{ margin: '10px 0', fontSize: '16px', textAlign: 'center' }}>
             La música de fondo es parte de la experiencia.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-            <button onClick={startAudio} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20%' }}>
+            <button onClick={startAudio} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20%', width: '80%' }}>
               INGRESAR CON MÚSICA
             </button>
-            <button onClick={closeModal} className="theme-btn" style={{ borderRadius: '20%' }}>
+            <button onClick={closeModal} className="theme-btn" style={{ borderRadius: '20%', width: '80%' }}>
               INGRESAR SIN MÚSICA
             </button>
           </div>
