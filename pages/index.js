@@ -48,6 +48,7 @@ const HomePage = () => {
           isOpen={isModalOpen}
           onRequestClose={closeModal}
           contentLabel="Reproducir música"
+          shouldCloseOnOverlayClick={false} // Evita cerrar clicando fuera del modal
           style={{
             overlay: {
               position: 'fixed',
@@ -69,11 +70,10 @@ const HomePage = () => {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              width: '90%', // Ajusta el ancho según sea necesario
-              maxWidth: '400px', // Valor máximo para el ancho
-              margin: 'auto', // Centra horizontalmente
+              width: '100%', // Ocupa todo el ancho de la pantalla
+              height: '100%', // Ocupa toda la altura de la pantalla
               background: 'white',
-              borderRadius: '8px',
+              borderRadius: '0', // Borde sin redondear
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
               padding: '20px',
               color: '#333',
