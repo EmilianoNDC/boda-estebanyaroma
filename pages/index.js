@@ -52,38 +52,39 @@ const HomePage = () => {
         <Scrollbar />
   
         <Modal
-          isOpen={isModalOpen}
-          onRequestClose={closeModal}
-          contentLabel="Reproducir música"
-          shouldCloseOnOverlayClick={false} // Evita cerrar clicando fuera del modal
-          style={{
-            overlay: {
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
-              zIndex: 1000,
-              overflow: 'hidden',
-            },
-            content: {
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: '100%', // Ocupa todo el ancho de la pantalla
-              height: '100%', // Ocupa toda la altura de la pantalla
-              background: 'white',
-              borderRadius: '20px', // Ajusta el radio de los bordes
-              padding: '20px',
-              color: '#333',
-            },
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Reproducir música"
+        shouldCloseOnOverlayClick={false}
+        style={{
+          overlay: {
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 1000,
+            overflow: 'hidden',
+          },
+          content: {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%', // Ocupa todo el ancho de la pantalla
+            height: '100%', // Ocupa toda la altura de la pantalla
+            background: 'white',
+            borderRadius: '0', // Ajusta el radio de los bordes
+            padding: '20px',
+            color: '#333',
+            WebkitBorderRadius: '0', // Anula los bordes redondeados en algunos navegadores móviles
+          },
           }}
         >
           <h2>Bienvenidos a la invitación de Esteban y Aroma</h2>
