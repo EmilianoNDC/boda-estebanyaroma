@@ -85,7 +85,7 @@ const HomePage = () => {
             },
           }}
         >
-          <h2>Bienvenidos a la invitación de Esteban y Aroma</h2>
+          <h2 style={{ textAlign: 'center' }}>Bienvenidos a la invitación de Esteban y Aroma</h2>
           <p style={{ margin: '10px 0', fontSize: '16px', textAlign: 'center' }}>
             La música de fondo es parte de la experiencia.
           </p>
