@@ -74,8 +74,8 @@ const HomePage = () => {
           }}
         >
           <h2>¿Quieres reproducir música?</h2>
-          <button onClick={startAudio}>Reproducir música</button>
-          <button onClick={closeModal}>No quiero reproducir música</button>
+          <button onClick={startAudio} className="theme-btn">Reproducir música</button>
+        <button onClick={closeModal} className="theme-btn">No quiero reproducir música</button>
         </Modal>
       </>
     );
