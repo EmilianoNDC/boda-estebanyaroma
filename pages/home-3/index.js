@@ -25,9 +25,10 @@ const HomePage3 = () => {
             <VideoSection vimg={vImg}/>
             <StorySection3 />
             <RsvpSectionS2/>
+            <Footer footerClass={'wpo-site-footer-s2'}/>
             <EventSectionS2/>
             <BlogSection bgClass={'section-bg'}/>
-            <Footer footerClass={'wpo-site-footer-s2'}/>
+
             <Scrollbar />
         </Fragment>
     )
