@@ -64,11 +64,11 @@ const TimeCountDown = (props) => {
           </div>
           <div className='time-section'>
             <div className='time'>{state.minutes || '00'}</div>
-            <small className="time-text">Minutos</small>
+            <small className="time-text">Min</small>
           </div>
           <div className='time-section'>
             <div className='time'>{state.seconds || '00'}</div>
-            <small className="time-text">Segundos</small>
+            <small className="time-text">Seg</small>
           </div>
         </>
       ) : (
