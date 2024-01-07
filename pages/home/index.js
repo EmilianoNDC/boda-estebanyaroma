@@ -34,8 +34,9 @@ const HomePage = () => {
       <PortfolioSection />
       <RsvpSection />
       <EventSection />
-      <BlogSection />
       <Footer />
+      <BlogSection />
+      
       <Scrollbar />
     </Fragment>
   );
