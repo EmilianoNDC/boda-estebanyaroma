@@ -20,6 +20,10 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Head>
         <title>Esteban & Aroma - Invitación</title>
+        <meta property="og:title" content="Esteban & Aroma - Invitación" />
+        <meta property="og:description" content="Invitación a la Boda" />
+        <meta property="og:image" content="/images/social-perfilpic.jpg" />
+        {/* Otras etiquetas Open Graph que puedas necesitar */}
       </Head>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
@@ -28,9 +32,8 @@ function MyApp({ Component, pageProps }) {
         </PersistGate>
       </Provider>
     </div>
-
   )
 }
 
-export default MyApp
+export default MyApp;
 
