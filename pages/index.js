@@ -20,10 +20,10 @@ const HomePage = () => {
             <Hero2 />
             <CoupleSection2 />
             <StorySection2 />
-            <EventSection/>
+
             <PortfolioSection />
             <RsvpSection/>
-
+            <EventSection/>
             <BlogSection />
             <Footer /> 
             <Scrollbar />
