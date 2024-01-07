@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import Navbar from '../components/Navbar/Navbar';
 import Hero2 from '../components/hero2/hero2';
 import CoupleSection2 from '../components/CoupleSection2/CoupleSection2';
@@ -45,6 +46,11 @@ const HomePage = () => {
   
     return (
       <>
+        <Helmet>
+          <meta property="og:image" content="/images/social-perfilpic.jpg" />
+          {/* Otras etiquetas Open Graph que puedas necesitar */}
+        </Helmet>
+  
         <Navbar />
         <Hero2 />
         <CoupleSection2 />
