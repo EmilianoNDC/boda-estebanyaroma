@@ -1,4 +1,15 @@
-// ... (importaciones y definiciones anteriores)
+import React, { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar/Navbar';
+import Hero2 from '../components/hero2/hero2';
+import CoupleSection2 from '../components/CoupleSection2/CoupleSection2';
+import StorySection2 from '../components/StorySection2/StorySection2';
+import PortfolioSection from '../components/PortfolioSection';
+import RsvpSection from '../components/RsvpSection/RsvpSection';
+import EventSection from '../components/EventSection/EventSection';
+import BlogSection from '../components/BlogSection/BlogSection';
+import Footer from '../components/footer/Footer';
+import Scrollbar from '../components/scrollbar/scrollbar';
+import Modal from 'react-modal';
 
 const HomePage = () => {
     const [isModalOpen, setModalOpen] = useState(true);
@@ -78,4 +89,3 @@ const HomePage = () => {
   };
   
   export default HomePage;
-  
