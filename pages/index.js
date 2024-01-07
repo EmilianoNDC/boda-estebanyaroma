@@ -81,7 +81,6 @@ const HomePage = () => {
               height: '100%', // Ocupa toda la altura de la pantalla
               background: 'white',
               borderRadius: '20px', // Ajusta el radio de los bordes
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
               padding: '20px',
               color: '#333',
             },
