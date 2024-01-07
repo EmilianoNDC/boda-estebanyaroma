@@ -15,13 +15,20 @@ const HomePage = () => {
     const [isModalOpen, setModalOpen] = useState(true);
     const [shouldPlayAudio, setShouldPlayAudio] = useState(false);
   
-    const openModal = () => setModalOpen(true);
-    const closeModal = () => setModalOpen(false);
+    const openModal = () => {
+      setModalOpen(true);
+      document.body.style.overflow = 'hidden'; // Desactiva el scrolling
+    };
+  
+    const closeModal = () => {
+      setModalOpen(false);
+      document.body.style.overflow = 'auto'; // Activa el scrolling
+    };
   
     const startAudio = () => {
       const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
       audioElement.play();
-      setModalOpen(false);
+      closeModal();
     };
   
     useEffect(() => {
