@@ -1,15 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar/Navbar';
-import Hero2 from '../components/hero2/hero2';
-import CoupleSection2 from '../components/CoupleSection2/CoupleSection2';
-import StorySection2 from '../components/StorySection2/StorySection2';
-import PortfolioSection from '../components/PortfolioSection';
-import RsvpSection from '../components/RsvpSection/RsvpSection';
-import EventSection from '../components/EventSection/EventSection';
-import BlogSection from '../components/BlogSection/BlogSection';
-import Footer from '../components/footer/Footer';
-import Scrollbar from '../components/scrollbar/scrollbar';
-import Modal from 'react-modal';
+// ... (importaciones y definiciones anteriores)
 
 const HomePage = () => {
     const [isModalOpen, setModalOpen] = useState(true);
@@ -57,28 +46,36 @@ const HomePage = () => {
               bottom: 0,
               backgroundColor: 'rgba(0, 0, 0, 0.5)',
               zIndex: 1000, // ajusta el valor según sea necesario
+              overflow: 'hidden', // desactiva el desplazamiento en el cuerpo principal
             },
             content: {
               position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              maxWidth: '400px', // ajusta el valor según sea necesario
-              width: '100%',
-              textAlign: 'center',
-              padding: '20px',
-              borderRadius: '8px',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
               background: 'white',
+              borderRadius: '8px',
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              padding: '20px',
             },
           }}
         >
           <h2>¿Quieres reproducir música?</h2>
-          <button onClick={startAudio} className="theme-btn">Reproducir música</button>
-        <button onClick={closeModal} className="theme-btn">No quiero reproducir música</button>
+          <button onClick={startAudio} className="theme-btn">
+            INGRESAR CON MÚSICA
+          </button>
+          <button onClick={closeModal} className="theme-btn">
+            INGRESAR SIN MÚSICA
+          </button>
         </Modal>
       </>
     );
   };
   
   export default HomePage;
+  
