@@ -17,6 +17,11 @@ const HomePage = () => {
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
 
+  const startAudio = () => {
+    const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
+    audioElement.play();
+  };
+
   useEffect(() => {
     const audioElement = new Audio('/Ed Sheeran - Perfect.mp3');
     if (!isModalOpen) {
@@ -57,3 +62,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
