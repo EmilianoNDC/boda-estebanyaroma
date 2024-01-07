@@ -85,12 +85,14 @@ const HomePage = () => {
             La música de fondo es parte de la experiencia.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-            <button onClick={startAudio} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20px', width: '80%' }}>
-              INGRESAR CON MÚSICA
-            </button>
-            <button onClick={closeModal} className="theme-btn" style={{ borderRadius: '20px', width: '80%' }}>
-              INGRESAR SIN MÚSICA
-            </button>
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '80%' }}>
+              <button onClick={startAudio} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20px', width: '48%' }}>
+                INGRESAR CON MÚSICA
+              </button>
+              <button onClick={closeModal} className="theme-btn" style={{ borderRadius: '20px', width: '48%' }}>
+                INGRESAR SIN MÚSICA
+              </button>
+            </div>
           </div>
         </Modal>
       </>
