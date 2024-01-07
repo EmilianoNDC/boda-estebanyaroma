@@ -61,10 +61,9 @@ const HomePage = () => {
             },
             content: {
               position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
@@ -81,7 +80,7 @@ const HomePage = () => {
           <p style={{ margin: '10px 0', fontSize: '16px' }}>
             La música de fondo es parte de la experiencia.
           </p>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
             <button onClick={startAudio} className="theme-btn" style={{ marginBottom: '10px', borderRadius: '20%' }}>
               INGRESAR CON MÚSICA
             </button>
